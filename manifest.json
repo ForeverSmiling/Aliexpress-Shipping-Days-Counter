@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Aliexpress passed shipping days counter",
+  "description": "This extension shows how many days passed since you made an order",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "Delivery.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+  {
+    "matches": ["https://trade.aliexpress.com/*"],
+    "js": ["calculator.js"],
+    "run_at": "document_start"
+  }
+  ],
+  "permissions": [
+    "activeTab", "tabs"
+  ]
+}
