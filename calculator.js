@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded',
 		for (var k=0; k<orders.length; k++) {
 			var order = orders[k];
 			var buttonConfirm = order.querySelector('button.button-confirmOrderReceived');
-			if (buttonConfirm) {
+			var buttonCancel = order.querySelector('button.button-cancelOrder');
+			if (buttonConfirm || buttonCancel) {
 				var e = order.querySelector("p.second-row > span.info-body");
 		        e.style.color = "red";
 		        var datestring = e.innerHTML.substr(6, e.innerHTML.length-6);
