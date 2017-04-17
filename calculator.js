@@ -16,4 +16,13 @@ document.addEventListener('DOMContentLoaded',
 		        e.innerHTML = e.innerHTML + ' (' + diffDays.toString() + ')'
 	    	}
 		}
+		//style="position: fixed; z-index: 2147483647; top: 10px; right: 10px; border: 0px; padding: 0px; margin: 0px;"
+		var paginator = document.querySelector('div.ui-pagination-body');
+		if (paginator)
+		{
+			paginator.style.position = "fixed";
+			paginator.style.zindex = 2147483647;
+			paginator.style.top = "10px";
+			paginator.style.left = "10px";
+		}
 	}, false); 
